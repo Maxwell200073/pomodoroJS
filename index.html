@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script
+            src="https://kit.fontawesome.com/82726aa9fe.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Pomodoro App</title>
+    </head>
+    <body>
+        <main>
+            <h1 id="mainTitle">25 + 5 Clock</h1>
+            <div class="clockSettings">
+                <div class="break">
+                    <p id="break-label">Break Length</p>
+                    <div class="clockSettings">
+                        <button id="break-decrement">
+                            <i
+                                data-mode="break"
+                                data-up-down="down"
+                                class="fas fa-arrow-circle-down"
+                            ></i>
+                        </button>
+                        <p id="break-length">5</p>
+                        <button id="break-increment">
+                            <i
+                                data-mode="break"
+                                data-up-down="up"
+                                class="fas fa-arrow-circle-up"
+                            ></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="session">
+                    <p id="session-label">Session Length</p>
+                    <div class="clockSettings">
+                        <button id="session-decrement">
+                            <i
+                                data-mode="session"
+                                data-up-down="down"
+                                class="fas fa-arrow-circle-down"
+                            ></i>
+                        </button>
+                        <p id="session-length">25</p>
+                        <button id="session-increment">
+                            <i
+                                data-mode="session"
+                                data-up-down="up"
+                                class="fas fa-arrow-circle-up"
+                            ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="timer">
+                <p id="timer-label">Session</p>
+                <h2 id="time-left">
+                    <span id="minutes">25</span>:<span id="seconds">00</span>
+                </h2>
+            </div>
+            <div class="controls">
+                <button id="start_stop"><i class="fas fa-play"></i></button>
+                <button id="reset"><i class="fa fa-rotate-right"></i></button>
+                <audio src="./assets/win.mp3" id="beep"></audio>
+            </div>
+        </main>
+        <script src="./app.js"></script>
+    </body>
+</html>
